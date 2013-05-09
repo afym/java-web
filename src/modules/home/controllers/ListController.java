@@ -1,59 +1,43 @@
 package modules.home.controllers;
 
 import java.io.IOException;
-import java.util.HashMap;
+import util.library.servlet.Controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import modules.home.entitiy.User;
+import modules.home.repository.UserRepository;
 
 /**
  * Servlet implementation class ListController
  */
-public class ListController extends HttpServlet {
+public class ListController extends Controller
+{
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ListController() {
+
+    public ListController()
+    {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		HttpSession session = request.getSession(true);
-
-		@SuppressWarnings("unchecked")
-		HashMap<Integer, User> usuarios = (HashMap<Integer, User>) session.getAttribute("usuarios");
-
-		if (usuarios == null) {
-			//session.setAttribute("usuarios", this.listarAction());
-			usuarios = (HashMap<Integer, User>)session.getAttribute("usuarios");
-		}
+		UserRepository userRepository = new UserRepository(request);
 		
-		System.out.print(usuarios);
-		
-		for (User user : usuarios.values()) {
-			System.out.println(user.getSurname());
-		}
-		request.setAttribute("usuarios", session.getAttribute("usuarios"));
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		/*User user = new User();
+		user.setId(0);
+		user.setName("Angel");
+		user.setSurname("Ybarhuen");
+		userRepository.insert(user);*/
+		request.setAttribute("users", userRepository.list());
+		this.render(request, response, "/user/list");
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 }

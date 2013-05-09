@@ -8,10 +8,15 @@
 </head>
 <body>
 	<form>
-		<input id="name" name="name" type="text">
-		<input id="surname" name="surname" type="text">
-		<button type="submit">Save</button>
-		<button type="button">Cancel</button>
+		<fieldset>
+			<legend>New User</legend>
+			<label for="name">Name :</label>
+			<input id="name" name="name" type="text">
+			<label for="name">Surname :</label>
+			<input id="surname" name="surname" type="text">
+			<button type="submit">Save</button>
+			<button type="button">Cancel</button>
+		</fieldset>
 	</form>
 </body>
 </html>

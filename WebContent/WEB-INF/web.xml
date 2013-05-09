@@ -13,7 +13,7 @@
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>inicio.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -33,6 +33,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ListController</servlet-name>
-    <url-pattern>/ListController</url-pattern>
+    <url-pattern>/list</url-pattern>
   </servlet-mapping>
 </web-app>
