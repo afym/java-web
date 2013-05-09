@@ -1,51 +1,34 @@
 package modules.home.entitiy;
 
-import java.util.Date;
-
 public class User
 {
 	private Integer id;
-	private String nombre;
-	private String apellido;
-	private Integer edad;
-
-	public Integer getId()
-	{
+	private String name;
+	private String surname;
+	private Integer age;
+	
+	public Integer getId() {
 		return id;
 	}
-	
-	public void setId(Integer id)
-	{
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	public String getNombre()
-	{
-		return nombre;
+	public String getName() {
+		return name;
 	}
-	
-	public void setNombre(String nombre)
-	{
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public String getApellido()
-	{
-		return apellido;
+	public String getSurname() {
+		return surname;
 	}
-	
-	public void setApellido(String apellido)
-	{
-		this.apellido = apellido;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
-	
-	public Integer getEdad()
-	{
-		return edad;
+	public Integer getAge() {
+		return age;
 	}
-	
-	public void setEdad(Integer edad)
-	{
-		this.edad = edad;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 }

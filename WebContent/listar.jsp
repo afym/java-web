@@ -7,6 +7,24 @@
 <title>Listado de usuarios</title>
 </head>
 <body>
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>1</th>
+				<th>Angel</th>
+				<th>Ybarhuen</th>
+				<th>25</th>
+			</tr>
+		</tbody>
+	</table>
 	<%
 		HashMap<Integer, User> usuarios = null;
 

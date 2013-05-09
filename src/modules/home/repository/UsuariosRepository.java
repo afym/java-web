@@ -14,9 +14,9 @@ public class UsuariosRepository
 			Double edad = Math.random() * 10 + Math.random() * 5;
 			User usuario = new User();
 			usuario.setId(indice);
-			usuario.setNombre("USUARIO # " + indice);
-			usuario.setApellido("APELLIDO #" + indice);
-			usuario.setEdad(edad.intValue());
+			usuario.setName("USUARIO # " + indice);
+			usuario.setSurname("APELLIDO #" + indice);
+			usuario.setAge(edad.intValue());
 			usuarios.put(indice, usuario);
 		}
 
