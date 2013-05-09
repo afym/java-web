@@ -34,7 +34,7 @@
 	</table>
 	<% } else { %>
 		<div>
-			Sorry we do not have register users.
+			Sorry we do not have users register for now.
 		</div>
 	<% } %>   
 	</body>
