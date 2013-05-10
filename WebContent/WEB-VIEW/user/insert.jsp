@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form>
+	<form id="user-form" name="user-form" method="post" action="insert">
 		<fieldset>
 			<legend>New User</legend>
 			<label for="name">Name :</label>
 			<input id="name" name="name" type="text">
 			<label for="name">Surname :</label>
 			<input id="surname" name="surname" type="text">
+			<label for="age">Age :</label>
+			<input id="age" name="age" type="text">
 			<button type="submit">Save</button>
 			<button type="button">Cancel</button>
 		</fieldset>

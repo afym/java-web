@@ -6,7 +6,8 @@ import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import util.library.servlet.Controller;
+
+import util.library.mvc.Controller;
 
 public class IndexController extends Controller {
 	private static final long serialVersionUID = 1L;
@@ -19,7 +20,7 @@ public class IndexController extends Controller {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException
 	{
-		this.render(request, response, "/index");
+		this.render(request, response, "/../index");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 

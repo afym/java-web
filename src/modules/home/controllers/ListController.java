@@ -1,7 +1,8 @@
 package modules.home.controllers;
 
 import java.io.IOException;
-import util.library.servlet.Controller;
+
+import util.library.mvc.Controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

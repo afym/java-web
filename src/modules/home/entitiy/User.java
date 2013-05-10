@@ -1,5 +1,7 @@
 package modules.home.entitiy;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class User
 {
 	private Integer id;
@@ -30,5 +32,18 @@ public class User
 	}
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public User populate(HttpServletRequest request)
+	{
+		String name = request.getParameter("name");
+		String surname = request.getParameter("surname");
+		String age = request.getParameter("age");
+		
+		this.setName(surname);
+		this.setSurname(surname);
+		this.setAge(Integer.parseInt(age));
+		
+		return this;
 	}
 }
