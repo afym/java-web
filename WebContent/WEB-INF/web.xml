@@ -6,20 +6,20 @@
   <servlet>
     <display-name>IndexController</display-name>
     <servlet-name>IndexController</servlet-name>
-    <servlet-class>modules.home.controllers.IndexController</servlet-class>
+    <servlet-class>modules.user.controllers.IndexController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>IndexController</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>/WEB-INF/index.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>InsertController</display-name>
     <servlet-name>InsertController</servlet-name>
-    <servlet-class>modules.home.controllers.InsertController</servlet-class>
+    <servlet-class>modules.user.controllers.InsertController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InsertController</servlet-name>
@@ -29,10 +29,30 @@
     <description></description>
     <display-name>ListController</display-name>
     <servlet-name>ListController</servlet-name>
-    <servlet-class>modules.home.controllers.ListController</servlet-class>
+    <servlet-class>modules.user.controllers.ListController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListController</servlet-name>
     <url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteController</display-name>
+    <servlet-name>DeleteController</servlet-name>
+    <servlet-class>modules.user.controllers.DeleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteController</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateController</display-name>
+    <servlet-name>UpdateController</servlet-name>
+    <servlet-class>modules.user.controllers.UpdateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateController</servlet-name>
+    <url-pattern>/update</url-pattern>
   </servlet-mapping>
 </web-app>
