@@ -18,6 +18,7 @@
 						<th>Name</th>
 						<th>Surname</th>
 						<th>Age</th>
+						<th>Management</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -27,13 +28,21 @@
 							<th>${user.value.getName()}</th>
 							<th>${user.value.getSurname()}</th>
 							<th>${user.value.getAge()}</th>
+							<th>
+								<a href="update?id=${user.key}">Update</a>
+								<a href="delete?id=${user.key}">Delete</a>
+							</th>
 						</tr>
 					</c:forEach>
 				</tbody>
 				</table>
+				<br/>
+				<a href="index">Insert another user</a>
 		    </c:when>
 		    <c:otherwise>
 		       	<div> There are not users.</div>
+		       	<br/>
+		       	<a href="index">Back to main page</a>
 		    </c:otherwise>
 		</c:choose>
 	</body>
